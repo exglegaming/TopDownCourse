@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://gab31scsv5av"]
+
+[ext_resource type="Texture2D" uid="uid://d2u8k4irtslu1" path="res://Assets/Animations/Shadow.png" id="1_qer5h"]
+[ext_resource type="Texture2D" uid="uid://bxjitarogr0el" path="res://Assets/Animations/Player_Idle.png" id="2_pmdnf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_akw4a"]
+radius = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm67w"]
+atlas = ExtResource("2_pmdnf")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84utv"]
+atlas = ExtResource("2_pmdnf")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi4ft"]
+atlas = ExtResource("2_pmdnf")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgr12"]
+atlas = ExtResource("2_pmdnf")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa30k"]
+atlas = ExtResource("2_pmdnf")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_446ba"]
+atlas = ExtResource("2_pmdnf")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xboxw"]
+atlas = ExtResource("2_pmdnf")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh528"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm67w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84utv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi4ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgr12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa30k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_446ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xboxw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = ExtResource("1_qer5h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_akw4a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wh528")
+autoplay = "default"
+frame = 5
+frame_progress = 0.15443757
+offset = Vector2(0, -20)

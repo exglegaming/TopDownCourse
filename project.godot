@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="Top Down Course"
+run/main_scene="uid://c1c86nx7dng35"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
@@ -32,3 +41,7 @@ folder_colors={
 "res://Scenes/": "blue",
 "res://Scripts/": "orange"
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

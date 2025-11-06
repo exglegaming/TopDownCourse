@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://c1c86nx7dng35"]
+[gd_scene load_steps=5 format=4 uid="uid://c1c86nx7dng35"]
 
 [ext_resource type="Texture2D" uid="uid://d1j23s4cj644r" path="res://Assets/Level/Background_Grass.png" id="1_a113d"]
+[ext_resource type="PackedScene" uid="uid://gab31scsv5av" path="res://Scenes/Entities/Player/Player.tscn" id="2_vdr06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_idj7w"]
 texture = ExtResource("1_a113d")
@@ -16,3 +17,6 @@ sources/0 = SubResource("TileSetAtlasSource_idj7w")
 [node name="BackgroundLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_c1w88")
+
+[node name="Player" parent="." instance=ExtResource("2_vdr06")]
+position = Vector2(316, 176)
