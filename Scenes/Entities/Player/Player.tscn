@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://gab31scsv5av"]
+[gd_scene load_steps=13 format=3 uid="uid://gab31scsv5av"]
 
+[ext_resource type="Script" uid="uid://moe5xdcrlsht" path="res://Scripts/Entities/Player/Player.cs" id="1_pmdnf"]
 [ext_resource type="Texture2D" uid="uid://d2u8k4irtslu1" path="res://Assets/Animations/Shadow.png" id="1_qer5h"]
 [ext_resource type="Texture2D" uid="uid://bxjitarogr0el" path="res://Assets/Animations/Player_Idle.png" id="2_pmdnf"]
 
@@ -65,6 +66,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
+script = ExtResource("1_pmdnf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
